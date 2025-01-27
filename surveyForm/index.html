@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Survey Form</title>
+</head>
+<body>
+    <form id="survey-form">
+        <h1 id="title">Survey Form</h1>
+        <p id="description">Please fill out the survey below:</p>
+        
+        <label id="name-label" for="name">Name:</label>
+        <input id="name" type="text" placeholder="Enter your name" required/>
+
+        <label id="email-label" for="email">Email:</label>
+        <input id="email" type="email" placeholder="Enter your email" required/>
+
+        <label id="number-label" for="number">Age:</label> 
+        <input id="number" type="number" placeholder="Enter your age" min="18" max="100" required/>
+
+        <label for="dropdown">Select your role:</label>
+        <select id="dropdown">
+            <option value="student">Student</option>
+            <option value="professional">Professional</option>
+            <option value="other">Other</option>
+        </select>
+
+        <p>Would you recommend us?</p>
+        <input type="radio" id="recommend-yes" name="recommend" value="yes">
+        <label for="recommend-yes">Yes</label>
+        <input type="radio" id="recommend-no" name="recommend" value="no">
+        <label for="recommend-no">No</label>
+
+        <p>Select your preferences</p>
+        <input type="checkbox" id="preference-newsletter" name="preferences" value="newsletter">
+        <label for="preference-newsletter">Newsletter</label>
+        <input type="checkbox" id="preference-updates" name="preferences" value="updates">
+        <label for="preference-updates">Product Updates</label>
+
+        <label for="comments">Any comments or suggestions:</label>
+        <textarea id="comments" placeholder="Enter your comments here"></textarea>
+
+        <input id="submit" type="submit" value="submit">
+    </form>
+
+</body>
+</html>
