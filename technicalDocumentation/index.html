@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav id="navbar">
+        <header>JS Documentation</header>
+        <a class="nav-link" href="#Introduction">Introduction</a>
+        <a class="nav-link" href="#JavaScript_and_Java">JavaScript and Java</a>
+        <a class="nav-link" href="#Variables">Variables</a>
+        <a class="nav-link" href="#Data_Types">Data Types</a>
+        <a class="nav-link" href="#Functions">Functions</a>
+    </nav>
+
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <p>JavaScript is a cross-platform, object-oriented scripting language.</p>
+            <p>It is a small and lightweight language. Inside a host environment:</p>
+            <code>function greetMe(yourName) { alert("Hello " + yourName); }</code>
+            <li>Client-side JavaScript</li>
+            <li>Server-side JavaScript</li>
+        </section>
+
+        <section class="main-section" id="JavaScript_and_Java">
+            <header>JavaScript and Java</header>
+            <p>JavaScript and Java are similar in name but fundamentally different.</p>
+            <p>Key differences include:</p>
+            <code>// JavaScript: dynamically typed
+let x = 10;</code>
+            <li>Compilation vs Interpretation</li>
+            <li>Type systems</li>
+        </section>
+
+        <section class="main-section" id="Variables">
+            <header>Variables</header>
+            <p>Variables store values in your program.</p>
+            <code>var x = 42; // Global variable
+let y = 13; // Block-scoped</code>
+            <p>Three ways to declare:</p>
+            <li>var</li>
+            <li>let</li>
+            <li>const</li>
+        </section>
+
+        <section class="main-section" id="Data_Types">
+            <header>Data Types</header>
+            <p>JavaScript types include:</p>
+            <code>typeof "John" // Returns "string"</code>
+            <li>Number</li>
+            <li>String</li>
+            <li>Boolean</li>
+            <li>Object</li>
+        </section>
+
+        <section class="main-section" id="Functions">
+            <header>Functions</header>
+            <p>Functions are fundamental building blocks in JavaScript.</p>
+            <code>function square(number) {
+    return number * number;
+}</code>
+            <p>Function features:</p>
+            <li>Parameters</li>
+            <li>Return values</li>
+            <li>Scope</li>
+        </section>
+    </main>
+    <div class="top-btn" title="Go to top">↑</div>
+    // Add this script at the end of the body before closing </body>
+<script>
+    // Show/hide scroll to top button
+    const topBtn = document.querySelector('.top-btn');
+    
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 200) {
+            topBtn.classList.add('show');
+        } else {
+            topBtn.classList.remove('show');
+        }
+    });
+
+    // Smooth scroll to top
+    topBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+</script>
+</body>
+</html>
