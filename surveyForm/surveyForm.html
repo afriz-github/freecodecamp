@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Survey Form</title>
+</head>
+<body>
+  
+  <form id="survey-form">
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Please fill out the survey below:</p>
+    <!-- Name Section -->
+    <label id="name-label" for="name">Name:</label>
+    <input id="name" type="text" placeholder="Enter your name" required>
+
+    <!-- Email Section -->
+    <label id="email-label" for="email">Email:</label>
+    <input id="email" type="email" placeholder="Enter your email" required>
+
+    <!-- Number Section -->
+    <label id="number-label" for="number">Age:</label>
+    <input id="number" type="number" placeholder="Enter your age" min="18" max="100" required>
+    
+    <!-- Dropdown Section -->
+    <label for="dropdown">Select your role:</label>
+    <select id="dropdown">
+      <option value="student">Student</option>
+      <option value="professional">Professional</option>
+      <option value="other">Other</option>
+    </select>
+    
+    <!-- Radio Buttons Section -->
+    <p>Would you recommend us?</p>
+    <input type="radio" id="recommend-yes" name="recommend" value="yes">
+    <label for="recommend-yes">Yes</label>
+    <input type="radio" id="recommend-no" name="recommend" value="no">
+    <label for="recommend-no">No</label>
+
+    <!-- Checkboxes Section -->
+    <p>Select your preferences:</p>
+    <input type="checkbox" id="preference-newsletter" name="preferences" value="newsletter">
+    <label for="preference-newsletter">Newsletter</label>
+    <input type="checkbox" id="preference-updates" name="preferences" value="updates">
+    <label for="preference-updates">Product Updates</label>
+
+    <!-- Textarea Section -->
+    <label for="comments">Any comments or suggestions:</label>
+    <textarea id="comments" placeholder="Enter your comments here"></textarea>
+    
+    <!-- Submit Button -->
+    <input id="submit" type="submit" value="Submit">
+  </form>
+</body>
+</html>
