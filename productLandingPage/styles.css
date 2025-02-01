@@ -1,0 +1,263 @@
+/* Updated styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #e5e5e5;
+}
+
+body {
+    background-color: #0a0a0a;
+}
+
+#header {
+    position: fixed;
+    height: 160px;
+    top: 0;
+    width: 100%;
+    background: rgba(10, 10, 10, 0.95);
+    padding: 2rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(229, 229, 229, 0.1);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+#header-img {
+    height: 80px; /* Kontrol tinggi logo */
+    width: auto; /* Pertahankan aspect ratio */
+}
+
+#nav-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    position: relative;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #c5a47e;
+    transition: width 0.3s;
+}
+
+.nav-link:hover {
+    color: #c5a47e;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.container {
+    margin-top: 160px;
+    padding: 0 3rem;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section {
+    scroll-margin-top: 160px; /* Offset untuk navigasi anchor */
+}
+
+/* Hero Section */
+#hero {
+    height: calc(100vh-160px);
+    background: linear-gradient(rgba(10, 10, 10, 0.7), rgba(10, 10, 10, 0.7)),
+                url('https://images.unsplash.com/photo-1612786143266-b0363a2f9ca1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: -40px;
+    padding-top: 160px;
+
+}
+
+#hero h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Technology Section */
+#technology {
+    padding: 8rem 0;
+    border-bottom: 1px solid rgba(229, 229, 229, 0.1);
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin-top: 4rem;
+}
+
+.feature {
+    padding: 2.5rem;
+    border: 1px solid rgba(229, 229, 229, 0.1);
+    transition: all 0.3s ease;
+}
+
+.feature:hover {
+    border-color: #c5a47e;
+    transform: translateY(-10px);
+}
+
+.feature h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #c5a47e;
+}
+
+.feature p {
+    font-weight: 300;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Video Section */
+#craftsmanship {
+    padding: 8rem 0;
+}
+
+#video {
+    width: 100%;
+    height: 800px;
+    border: 1px solid rgba(229, 229, 229, 0.1);
+    background: #000;
+}
+
+/* Specifications Section */
+#specifications {
+    padding: 8rem 0;
+}
+
+.specs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    margin-top: 4rem;
+}
+
+.spec-item {
+    border-bottom: 1px solid rgba(229, 229, 229, 0.1);
+    padding: 2rem 0;
+}
+
+.spec-category {
+    color: #c5a47e;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+}
+
+.spec-value {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+/* Contact Form */
+#form {
+    max-width: 600px;
+    margin: 8rem auto;
+    text-align: center;
+}
+
+#email {
+    width: 100%;
+    padding: 1.2rem;
+    background: transparent;
+    border: 1px solid rgba(229, 229, 229, 0.1);
+    margin-bottom: 2rem;
+    text-align: center;
+    letter-spacing: 0.1em;
+    transition: all 0.3s ease;
+}
+
+#email:focus {
+    border-color: #c5a47e;
+    outline: none;
+}
+
+#submit {
+    background: transparent;
+    border: 1px solid #c5a47e;
+    padding: 1.2rem 3rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+#submit:hover {
+    background: #c5a47e;
+    color: #0a0a0a;
+}
+
+@media (max-width: 1024px) {
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .specs-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    #video {
+        height: 500px;
+    }
+    
+    #header {
+        padding: 1rem 2rem;
+    }
+    
+    .nav-bar {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    #hero p {
+        font-size: 1rem;
+    }
+    
+    .container {
+        padding: 0 1.5rem;
+    }
+    
+    #video {
+        height: 300px;
+    }
+}
